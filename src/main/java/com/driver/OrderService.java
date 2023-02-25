@@ -6,9 +6,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class OrderService {
+public class OrderService{
     @Autowired
-    OrderRepository orderRepository = new OrderRepository();
+    OrderRepository orderRepository ;
 
     public void addOrder(Order order) {
         orderRepository.addOrder(order);
@@ -57,6 +57,7 @@ public class OrderService {
     public void deletePartnerById(String partnerId) {
         orderRepository.deletePartnerById(partnerId);
     }
+
 
     public void deleteOrderById(String orderId) {
         orderRepository.deleteOrderById(orderId);
